@@ -1,0 +1,88 @@
+
+/* ფსევდო კლასი */
+
+p:hover{
+ color:red;
+}
+
+
+/* ფსევდო ელემენტები */
+
+
+input::placeholder{
+    color: red;
+}
+
+p::first-letter{
+    font-size: 50px;
+}
+
+p::first-line{
+    color: blue;
+}
+
+p::selection{
+    background-color: yellow;
+}
+
+
+/* h2::before{
+ content: "''";
+}
+
+h2::after{
+    content: "'---";
+} */
+
+h2{
+    position: relative;
+
+}
+
+h2::before{
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    top: 25px;
+    display: none;
+    transition: 1s;
+}
+
+h2::after{
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: yellowgreen;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    visibility: hidden;
+    transition: 1s;
+}
+
+
+h2:hover::before{
+    visibility: visible;
+    transition: 1s;
+    width: 100px;
+
+}
+h2:hover::after{
+    visibility: visible;
+    transition: 1s;
+    width: 100px;
+}
+
+
+html::-webkit-scrollbar{
+    width: 15px;
+}
+html::-webkit-scrollbar-thumb{
+    background: yellow;
+}
+html::-webkit-scrollbar-track{
+    background: green;
+}
+
